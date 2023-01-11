@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  width: 15rem;
+  height: 18rem;
+}
+.card-header{
+  background-color: lightslategrey;
+  object-fit: cover;
+  height: 6rem;
+}
+.badge{
+  top: 0.5rem;
+  right: 1rem;
+  width: 3rem;
+  height: 1.7rem;
+}
+
