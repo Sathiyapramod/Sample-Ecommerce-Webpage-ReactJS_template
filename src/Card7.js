@@ -1,10 +1,8 @@
-import React from 'react';
+
 import { useState } from 'react';
-import Cartbutton from './Cartbutton';
 
-export let flagCount = 0;
 
-const Card7 = () => {
+export function Card7({Counter}) {
 
     const [show, setShow] = useState(true);
     let card = [
@@ -31,7 +29,7 @@ const Card7 = () => {
                             <div className='text-decoration-line-through'>{element.initialprice}</div>
                             <div className='fs-5 fw-bold'>{element.revisedprice}</div>
                         </div>
-                        <div><button className='btn btn-outline-dark btn-sm' onClick={()=>{setShow(false)}}>{show ? "Add to" : "Remove"} Cart </button>
+                        <div><button className='btn btn-outline-dark btn-sm' onClick={()=>{setShow(!show); Counter(show)}}>{show ? "Add to" : "Remove"} Cart </button>
                         </div>
                     </div>
                 </div>
@@ -39,5 +37,3 @@ const Card7 = () => {
         })}</div>
     )
 }
-
-export default Card7
